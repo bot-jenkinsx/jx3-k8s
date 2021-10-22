@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: bot-jenkinsx
+    repository: jx3-k8s
   - key: staging
   - key: production
   ingress:
-    domain: "vlab.nimbletstorage.com"
-    externalDNS: false
+    domain: vlab.nimbletstorage.com
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: bot-jenkinsx
   repository: bucketrepo
   secretStorage: local
   vault: {}
